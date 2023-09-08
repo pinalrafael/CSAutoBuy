@@ -219,7 +219,20 @@ namespace CSAutoBuy
                     linha = linha.Substring(0, linha.Length - 1);
                 }
 
-                this.Configs.Binds.Add(new Bind() { Nome = txtNome.Text, Tecla = this.Tecla, Linha = linha });
+                bool addcfg = true;
+                foreach (var item in this.Configs.Binds)
+                {
+                    if (item.Tecla.Equals(this.Tecla))
+                    {
+                        item.Nome = txtNome.Text;
+                        item.Linha = linha;
+                    }
+                }
+
+                if (addcfg)
+                {
+                    this.Configs.Binds.Add(new Bind() { Nome = txtNome.Text, Tecla = this.Tecla, Linha = linha });
+                }
 
                 if (chbCopia.Checked)
                 {
