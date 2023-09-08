@@ -93,7 +93,6 @@
   <ItemGroup>
     <Content Include="assets\favicon.png" />
     <Content Include="favicon.ico" />
-    <None Include="README.md" />
     <None Include="Resources\shield.png" />
     <None Include="Resources\defuser.jpg" />
     <None Include="Resources\nvgs.jpg" />
